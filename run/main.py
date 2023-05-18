@@ -1,5 +1,7 @@
+import sys
+sys.path.insert(0, "C:\\Studies\\NMSC\\piirila_reino_nmsc_project1\\src")
+
 import integral
-import numpy as np
 import constants as c
 import conversions as conv
 import semiempirical as sem
@@ -13,7 +15,7 @@ if __name__ == "__main__":
     # get the nodes and weights
     abscissas, weights = leggauss(n)
     
-    # get the initial projectile energies in center of mass coordinates
+    # get the initial kinetic energies of the system in center of mass coordinates
     E_com = [conv.lab_to_com(x, c.m1[0], c.m2[0]) for x in c.E_lab]
 
     stopping_power1 = []
